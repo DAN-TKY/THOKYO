@@ -1,0 +1,34 @@
+THOKYO - COLOCAR O SITE NO AR E SALVAR AS ALTERACOES PARA TODOS VEREM
+
+=== PARTE 1: COLOCAR NO AR (so uma vez) ===
+1) No GitHub, crie um repositorio novo (ex.: thokyo) e deixe como Public.
+2) "Add file" > "Upload files" e envie TUDO desta pasta:
+   - index.html
+   - .nojekyll (arquivo vazio; se nao aparecer, nao precisa)
+3) Clique em "Commit changes".
+4) Settings > Pages > Source: "Deploy from a branch" > Branch: main, pasta /(root) > Save.
+5) Em 1 a 2 minutos o link aparece: https://SEU-USUARIO.github.io/thokyo/
+
+=== PARTE 2: SALVAR AS EDICOES PARA TODOS (so uma vez) ===
+Para o Admin gravar direto no seu repositorio, crie um token:
+1) GitHub > sua foto > Settings > (fim do menu) Developer settings
+   > Personal access tokens > Fine-grained tokens > Generate new token.
+2) Token name: thokyo | Expiration: escolha um prazo longo (ex.: 1 ano).
+3) Repository access: "Only select repositories" > escolha o repositorio do site.
+4) Permissions > Repository permissions > Contents: "Read and write".
+5) Generate token e COPIE o token (comeca com github_pat_ ou ghp_). Ele so aparece uma vez.
+
+No site:
+1) Abra o site, clique em Admin e entre (usuario e senha).
+2) Clique no botao "GitHub", escreva seu-usuario/thokyo e cole o token. Salvar.
+3) Pronto. Agora, toda vez que voce editar e clicar em "Salvar alteracoes",
+   o site grava os dados no repositorio (arquivos data.json e musica.mp3)
+   e, em cerca de 1 minuto, TODOS os visitantes veem a versao nova.
+
+=== IMPORTANTE ===
+- O token fica guardado so no navegador de quem conectou. Nao compartilhe o token
+  e nao conecte em computador publico. Se vazar, apague o token no GitHub e crie outro.
+- Quem nao tem o token nao consegue publicar mudancas, mesmo sabendo a senha do Admin.
+- As imagens (fundo da capa e foto do Quem somos) ja estao dentro do index.html. Nao precisa subir mais nada alem dele.
+- Os contadores de visitantes nao contam sozinhos no GitHub: edite os numeros no Admin.
+- Se algo der errado, use "Baixar HTML" e suba o arquivo como index.html.
